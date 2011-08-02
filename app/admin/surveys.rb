@@ -19,8 +19,8 @@ ActiveAdmin.register Survey do
     f.inputs "Questions" do
       f.fields_for :questions do |qf|
 # #1 uncomment and render fails 
-#        qf.hidden :_destroy
-        qf.input :content
+       qf.input :_destroy, :as => :hidden
+       # qf.input :content
               
 # #2 uncomment and only position field is rendered
 #        qf.input :position
