@@ -5,3 +5,14 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+Survey.create( {:name => 'Test #1',
+  :questions_attributes => [{
+    :content => "What is the airspeed of an unladen swallow?",
+    :answers_attributes => [ 
+      { :content => 'African?' },
+      { :content => 'European?' },
+    ],
+  }]
+  
+})
