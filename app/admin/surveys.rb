@@ -1,4 +1,25 @@
+
+module ActiveAdmin
+  class DSL
+    # This removes the filter sidebar (and all default or previously called side bars)
+    def clear_sidebars()
+      config.clear_sidebar_sections!
+    end
+  end
+end
+
 ActiveAdmin.register Survey do
+  
+  # config and @config = ActiveAdmin::Resource
+  # Rails.logger.info("*** @config = #{@config}")
+
+  # config.resource = Survey Model
+  # Rails.logger.info("*** @config.resource = #{@config.resource}")
+
+  # Rails.logger.info("*** config.sidebar_sections = #{config.sidebar_sections}")
+  # Rails.logger.info("*** config.member_actions = #{config.member_actions}")
+
+  clear_sidebars
   
   show  do
     attributes_table :id, :name, :created_at
